@@ -16,7 +16,7 @@ P.S. Функции вызывать не обязательно*/
 // Код возьмите из предыдущего домашнего задания
 
 
-
+/* 
 
 const personalMovieDB = {
     count: 0,
@@ -106,3 +106,145 @@ const personalMovieDB = {
 
 
 
+
+/* let num = -1;
+ function getCoupeNumber(num) {
+     if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger) {
+         return 'Ошибка определения места';
+     }
+     if (num > 36) {
+         return 'Таких мест нет';
+     }
+     
+     for (let i = 4; i <= 36; i = i + 4) {
+         if (num <= i) {
+             return Math.ceil (i / 4);
+         }
+     }
+
+}
+console.log (getCoupeNumber (num));
+
+
+ */
+/* 
+ let time = 5490;
+function getTimeFromMinutes(time) {
+if (typeof(time) !== 'number' || time < 0 || !Number.isInteger (time)) {
+return 'Ошибка';
+}
+if (time < 60) {
+    return `Это 0 часов ${time} минут`;
+}
+let hourStr = '';
+const hour = Math.floor (time / 60);
+const minutes = time % 60;
+switch (hour) {
+    case 0:
+        hourStr = 'часов';
+        break;
+    case 1:
+        hourStr = 'час';
+        break;
+    case 2:
+    case 3:
+    case 4:
+        hourStr = 'часа';
+        break;
+        default:
+            hourStr = 'часов';
+}
+
+return `Это ${hour} ${hourStr} ${minutes} минут`;
+
+}
+console.log (getTimeFromMinutes(time)); 
+ */
+/* let a = 100000, b = 2000, c = -11000, d = 1;
+function findMaxNumber(a, b, c, d) {
+if ( typeof(a) !== 'number',
+    typeof(b) !== 'number',
+    typeof(c) !== 'number',
+    typeof(d) !== 'number') {
+    return 0;
+} else 
+return Math.max (a, b, c, d);
+}
+console.log(findMaxNumber(a, b, c, d)); */
+/* 
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+    let str = '';
+
+    arr.length === 0 ? str = 'Семья пуста' : str = 'Семья состоит из: ';
+
+    arr.forEach(member => {
+        str += `${member} `
+    });
+
+    return str;
+}
+
+showFamily(family);
+console.log(showFamily(family)); */
+/* const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+       arr.forEach(item => {
+        console.log(item.toLowerCase());
+    });
+ 
+}
+
+console.log(standardizeStrings(favoriteCities)); */
+
+/* const someString = 'This is some strange string';
+
+function reverse(str) {
+/* if (typeof(str) !== 'string') {
+    return "Fall";
+  } else {
+      console.log(str.split().reverse().join());
+  }
+
+}
+console.log(reverse(someString).split('').reverse().join('')); */
+
+
+/* let newStr = '';
+ for (let i = str.length - 1; i >= 0; i--) {
+   newStr += str[i];
+ }
+ return newStr;
+}
+
+reverse(someString);
+console.log(reverse(someString)); */ 
+
+/*  const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+    let str = '';
+    arr.lenght == 0 ? str = "Нет валют" : str = 'Есть доступные валюты \n';
+
+    arr.forEach(function (carr, i) {
+        if (carr !== missingCurr) {
+            str += `${carr} \n`;
+        }
+    });
+    return str;
+}
+availableCurr ([...baseCurrencies], [...additionalCurrencies]); 
+console.log (availableCurr ([...baseCurrencies], [...additionalCurrencies]), 'CNY'); */
+
+function foo(a,b) {
+    const [first] = a;
+    const {eng} = b;
+ 
+    return `${first} ${eng}`;
+}
+ 
+const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'});
+console.log (result);
