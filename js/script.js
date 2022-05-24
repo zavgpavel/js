@@ -248,7 +248,7 @@ console.log (availableCurr ([...baseCurrencies], [...additionalCurrencies]), 'CN
  
 const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'});
 console.log (result); */
-const restorantData = {
+/* const restorantData = {
     menu: [
         {
             name: 'Salad Caesar',
@@ -301,4 +301,159 @@ function transferWaitors(data) {
 }
 
 transferWaitors(restorantData);
-console.log(transferWaitors(restorantData));
+console.log(transferWaitors(restorantData)); */
+/* let x = 5;
+let n = 4;
+
+function pow(x, n) {
+    if(n === 1) {
+        return x;
+    } else {
+        return x * pow (x, n-1); 
+    } 
+} 
+console.log (pow (x, n)); */
+
+/* 
+function factorial(n) {
+    if (typeof(n) !== 'number' || !Number.isInteger(n)) {
+        return "Ошибка, проверьте данные";
+    }
+
+    if (n >= 1) {
+        return n * factorial(n - 1);
+    } else {
+        return 1;
+    }
+
+   }
+
+factorial(5);
+console.log (factorial(5)); */
+
+/* function fib(num) {
+  
+         return num <= 1 ? num : fib(num - 1) + fib(num - 2);
+    }
+   
+
+fib(11);
+console.log (fib(11)); */
+
+/* const shoppingMallData = {
+    shops: [
+        {
+            width: 10,
+            length: 5
+        },
+        {
+            width: 15,
+            length: 7
+        },
+        {
+            width: 20,
+            length: 5
+        },
+        {
+            width: 8,
+            length: 10
+        }
+    ],
+    height: 5,
+    moneyPer1m3: 300,
+    budget: 500
+}
+
+function isBudgetEnough(data) {
+    let square = 0;
+    let volume = 0;
+    
+    data.shops.forEach(shop => {
+        square += shop.width * shop.length;
+    });
+     volume = square * data.height;
+
+     if(volume * data.moneyPer1m3 <= data.budget  ) {
+        return 'хватит';
+     } else {
+         return 'не хватит';
+     }
+    
+}
+
+console.log(isBudgetEnough(shoppingMallData)); */
+
+/* const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam', 'Kert'];
+
+function sortStudentsByGroups(arr) {
+    arr.sort();
+    const a  = [], b = [], c = [], rest = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i < 3) {
+            a.push(arr[i]);
+        } else  if (i < 6) {
+                b.push(arr[i]);
+            } else  if (i < 9) {
+                    c.push(arr[i]);
+                } else {
+                    rest.push(arr[i]);
+                }
+    }
+    return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`]
+} */
+/* const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+function sortStudentsByGroups(arr) {
+    arr.sort();
+    const a = [], b = [], c = [], rest = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i < 3) {
+            a.push(arr[i]);
+        } else if (i < 6) {
+            b.push(arr[i]);
+        } else if (i < 9) {
+            c.push(arr[i]);
+        } else {
+            rest.push(arr[i]);
+        }
+    }
+    return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`]
+} */
+/* console.log(sortStudentsByGroups(students)); */
+
+const films = [
+    {
+        name: 'Titanic',
+        rating: 9
+    },
+    {
+        name: 'Die hard 5',
+        rating: 5
+    },
+    {
+        name: 'Matrix',
+        rating: 8
+    },
+    {
+        name: 'Some bad film',
+        rating: 4
+    }
+];
+
+/* function showGoodFilms(arr) {
+  return arr.filter(item =>  item.rating >= 8);
+    
+}
+console.log(showGoodFilms(films)); */
+/* function showListOfFilms(arr) {
+    return arr.reduce((acc, curr) => `${typeof(acc) === 'object' ? acc.name : acc}, ${curr.name}`)
+};
+console.log(showListOfFilms(films)); */
+function setFilmsIds(arr) {
+    return arr.map((film, i) => {
+        film.id = i;
+        return film;
+    });
+}
+console.log(setFilmsIds(films));
